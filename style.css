@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
+/* didnt use Overpass because of unequal alignment of text and digits inside elements */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 15px;
+  font-family: sans-serif;
+  background-color: hsl(216, 12%, 8%);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+@media (max-width: 375px) {
+  main {
+    padding-inline: 1rem;
+  }
+
+  .rating_state {
+    padding: 2rem;
+    min-width: 13rem;
+    min-height: 40vh;
+    border-radius: 20px;
+    display: grid;
+    grid-template-rows: repeat(5, max-content);
+    align-content: space-between;
+    background-color: hsl(213, 19%, 18%);
+  }
+
+  .star_image {
+    display: flex;
+    width: max-content;
+    border-radius: 50px;
+    background-color: hsl(214, 11%, 26%);
+  }
+
+  img {
+    padding: 0.5rem;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    color: hsl(0, 0%, 100%);
+  }
+
+  p {
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    color: hsl(217, 12%, 63%);
+  }
+
+  .rates {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .rates button {
+    padding: 0.9rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    border: none;
+    font-family: sans-serif;
+    background-color: hsl(214, 11%, 26%);
+    color: hsl(217, 12%, 63%);
+  }
+
+  .rates button:hover {
+    cursor: pointer;
+    background-color:hsl(25, 97%, 53%);
+    color:hsl(0, 0%, 100%);
+  }
+
+  .submit {
+    max-width: 100%;
+    padding-block: 0.8rem;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    border-radius: 20px;
+    border: none;
+    font-family: sans-serif;
+    background-color: hsl(25, 97%, 53%);
+    color: hsl(0, 0%, 100%);
+  }
+
+  .submit:hover {
+    cursor: pointer;
+    background-color:hsl(0, 0%, 100%);
+    color:hsl(25, 97%, 53%);
+  }
+
+  .thank_you_state {
+    display: none;
+    grid-template-rows: repeat(4, max-content);
+    align-content: space-between;
+    justify-items: center;
+    padding: 8%;
+    min-width: 13rem;
+    min-height: 40vh;
+    border-radius: 20px;  
+    background-color: hsl(213, 19%, 18%);
+  }
+
+  .selected {
+    width: max-content;
+    padding: 0.2rem 1rem;
+    color: hsl(25, 97%, 53%);
+    border-radius: 20px;
+    background-color: hsl(214, 11%, 26%);
+  }
+
+  .appreciation {
+    text-align: center;
+  }
+}
+
+@media (min-width: 376px) {
+  .rating_state {
+    display: grid;
+    padding: 2rem;
+    min-width: 23rem;
+    max-width: 20vw;
+    min-height: 40vh;
+    border-radius: 20px;
+    grid-template-rows: repeat(5, max-content);
+    align-content: space-between;
+    background-color: hsl(213, 19%, 18%);
+  }
+
+  .star_image {
+    display: flex;
+    width: max-content;
+    border-radius: 50px;
+    background-color: hsl(214, 11%, 26%);
+  }
+
+  img {
+    padding: 1.3rem;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    color: hsl(0, 0%, 100%);
+  }
+
+  p {
+    color: hsl(217, 12%, 63%);
+    line-height: 1.5rem;
+  }
+
+  .rates {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .rates button {
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    background-color: hsl(214, 11%, 26%);
+    color: hsl(217, 12%, 63%);
+    border: none;
+    padding: 1rem 1.5rem;
+    border-radius: 50px;
+  }
+
+  .rates button:hover {
+    cursor: pointer;
+    background-color:hsl(25, 97%, 53%);
+    color:hsl(0, 0%, 100%);
+  }
+
+  .submit {
+    max-width: 100%;
+    padding-block: 0.8rem;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    border-radius: 20px;
+    border: none;
+    font-family: sans-serif;
+    background-color: hsl(25, 97%, 53%);
+    color: hsl(0, 0%, 100%);
+  }
+
+  .submit:hover {
+    cursor: pointer;
+    background-color:hsl(0, 0%, 100%);
+    color:hsl(25, 97%, 53%);
+  }
+
+  .thank_you_state {
+    display: none;
+    grid-template-rows: repeat(4, max-content);
+    align-content: space-between;
+    justify-items: center;
+    padding: 2rem;
+    min-width: 23rem;
+    max-width: 20vw;
+    min-height: 40vh;
+    border-radius: 20px;  
+    background-color: hsl(213, 19%, 18%);
+  }
+
+  .selected {
+    width: max-content;
+    padding: 0.5rem 1rem;
+    color: hsl(25, 97%, 53%);
+    border-radius: 20px;
+    background-color: hsl(214, 11%, 26%);
+  }
+
+  .appreciation {
+    text-align: center;
+  }
+}
